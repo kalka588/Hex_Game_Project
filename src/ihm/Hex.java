@@ -21,6 +21,10 @@ public class Hex {
 		createPlayers();
 		this.plateau.init();
 		this.ihm.affiche(this.plateau.getPlateau());	
+		runGame();
+	}
+	
+	private void runGame() {
 		for(int i = 0; gameIsntOver(this.gPlayers); ++i) {
 			if(i == this.gPlayers.length) { i = 0; }
 			int x = this.ihm.askXpos(gPlayers[i].getName());
@@ -30,6 +34,7 @@ public class Hex {
 				this.ihm.affiche(this.plateau.getPlateau());	
 			} else {
 				this.ihm.xyErreur();
+				--i;
 			}
 		}
 	}
