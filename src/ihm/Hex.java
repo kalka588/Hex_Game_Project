@@ -27,8 +27,8 @@ public class Hex {
 		this.O.affiche(this.plateau.getPlateau());	
 		//while
 		for(int i = 0; i < this.gPlayers.length; ++i) {
-			int x = this.I.askXpos();
-			int y = this.I.askYpos();
+			int x = this.I.askXpos(gPlayers[i].getName());
+			int y = this.I.askYpos(gPlayers[i].getName());
 			// Tests sur x et y
 			//                 x  y                    x  y
 			this.plateau.place(x, y, gPlayers[i].place(x, y));
@@ -40,7 +40,7 @@ public class Hex {
 	private void createPlayers() {
 		gPlayers = new Player[this.nbPlayers];
 		for(int i = 0; i < gPlayers.length; ++i) {
-			gPlayers[i] = new Player(I.askNamePlayer(), I.askColorPlayer(), this.taille);
+			gPlayers[i] = new Player(I.askNamePlayer(i+1), I.askColorPlayer(i+1), this.taille);
 		}
 	}
 }
