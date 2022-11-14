@@ -8,4 +8,5 @@ public interface Iihm {
 	public int askXpos(String namePlayer);
 	public int askYpos(String namePlayer);
 	public void affiche(Piece[][] plat);
+	public void xyErreur();
 }

@@ -69,5 +69,10 @@ public class Ihm implements Iihm {
 		return s;
 	}
 
+	@Override
+	public void xyErreur() {
+		System.out.println("Les coordonnées entrées ne sont pas bonnes");
+	}
+
 
 }

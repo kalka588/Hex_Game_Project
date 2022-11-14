@@ -25,8 +25,26 @@ public class Player {
 	
 	public Piece place(int x, int y) {
 		Piece p = new Piece(this.color, x, y);
+		setVoisins(p);
 		this.pPieces[this.index] = p;
 	    ++this.index;
 		return p;
+	}
+	
+	private void setVoisins(Piece np) {
+		for(Piece p : this.pPieces) {
+			if(p != null && Math.abs(p.getX() - np.getX()) <= 1 && Math.abs(p.getY() - np.getY()) <= 1) {
+				p.setVoisins(np);
+				np.setVoisins(p);
+			}
+		}
+	}
+
+	public boolean win() {
+		return lienPossible();
+	}
+
+	private boolean lienPossible() {
+		return false;
 	}
 }
