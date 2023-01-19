@@ -8,5 +8,8 @@ Participants :
 
 Fonctionnalités :
 - Demande aux joueurs leurs noms  et leurs couleurs 
--  Possibilité de jouer en équipe 
--  Possibilité de placer des pièces  avec b pour la couleur bleue et r pour rouge
+-  Possibilité de jouer en équips
+-  Placer une pièce 
+-  Ne pas se placer sur une piece déjà posée ou hors du plateau
+-  Demander aux joueurs les coordonnées pour placer leur pièce, si les coordonnées ne sont pas bonnes, redemander au joueur les coordonnées
+-  afficher un plateau avec une taille définie dans le main 
